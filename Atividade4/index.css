@@ -1,12 +1,29 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+.container {
+    position: absolute;
+    top: 10%;
+   
 }
 
 nav {
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
     font-size: x-large;
     border-radius: 10px;
 }
 
+nav a {
+    text-decoration: none;
+    color: black;
+}
 .nav-abas{
     display:inline-flex;
   }
@@ -15,15 +32,16 @@ nav {
     margin: 1px;
     padding: 10px;
     border-radius: 5px;
-    background-color:  rgb(107, 107, 106);
+    background: linear-gradient(0deg, rgb(80, 79, 79) 0%, rgb(223, 219, 219) 100%);
     list-style-type:none;
     
  }
  .nav-abas :hover{
-    background-color: rgba(156, 142, 142, 0.70);
+    background: linear-gradient(0deg, rgb(14, 13, 13) 0%, rgb(223, 219, 219) 100%);
+    cursor: pointer;
  }
 
-.main {
+.principal {
     height: 300px;
     border-radius: 5px;
     background-image: url("fundo.jpg");
@@ -33,15 +51,13 @@ nav {
     font-size: 300%;
 }
 
-.main p {
-    background-color: rgba(0, 0, 0, 0.20);
+.principal p {
+    background-color: rgba(177, 174, 174, 0.2);
 }
 
-.container {
-    text-align: center;
-}
 
 .conteudo  {
+    position: relative;
     margin: 5px;
     margin-left: 10%;
     width: 50%;
@@ -55,21 +71,21 @@ nav {
     text-align: left;
 }
 
-.container .conteudo .cabecalho {
+.conteudo .cabecalho {
     text-align: center;
     border-radius: 5px;
     background-color: rgb(4, 90, 90);
     font-size: 200%;
 }
-
+/* .container p{
+    font-size: medium;
+} */
 
 .footer {
     text-align: center;
 }
 
-.container p{
-    font-size: medium;
-}
+
 img{
     float: left;
     padding: 5px;
