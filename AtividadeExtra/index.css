@@ -1,0 +1,84 @@
+body {
+    background-color: black;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mudarCor {
+    background-color: blue;
+    min-height: 300px;
+    min-width: 300px;
+    height: 500px;
+    width: 500px;
+}
+
+.mudarCor  h1::after{
+    content: "Azul";
+    color: black;
+} 
+
+@media screen and (min-width: 150px) and (max-width: 420px){
+	
+    .mudarCor {
+        background-color: brown;
+    }
+    .mudarCor  h1:after {
+        content: "Marrom 150 ~ 420 ";
+        color: black;
+    }
+}
+@media screen and (min-width: 420px) and (max-width: 768px){
+    .mudarCor {
+        background-color: blue;
+    }
+    .mudarCor h1:after {
+        content: "Azul 420 ~ 768";
+        color: red;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .mudarCor {
+        background-color: pink;
+    }
+    .mudarCor h1:after {
+        content: "Rosa 768 ~ 1024";
+        color: yellow;
+    }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1080px){
+    .mudarCor {
+        background-color: black;
+    }
+    .mudarCor h1:after {
+        content: "Preto 1024 ~ 1080";
+        color: pink;
+    }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1366px){
+    .mudarCor {
+        background-color: aqua;
+    }
+    .mudarCor h1:after {
+        content: "Azul esverdeado 1080 ~ 1366";
+        color: lawngreen;
+    }
+}
+
+
+@media screen and (min-width: 1366px){
+    .mudarCor {
+        background-color:  darkolivegreen;
+    }
+    .mudarCor h1:after {
+        content: "verdao >=1366";
+        color: coral;
+    }
+}
+
+
