@@ -1,0 +1,53 @@
+body {
+    font-size: 150%;
+    font-weight: bold;
+}
+.tela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    min-width: 300px;
+    height: 600px;
+    width: auto;
+}
+
+.janela {
+    width: 500px;
+    /* height: 500px; */
+}
+
+.titulo {
+    font-size: 200%;
+}
+.jogo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.resultado {
+    text-align: center;
+    font-size: 300%;
+}
+
+.opcao {
+    display: flex;
+    background-color: white;
+    color: blue;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.opcao :hover{
+ border: 3px solid chartreuse;
+}
+
+img{
+    float: left;
+    padding: 5px;
+    width: 120px;
+    height: 150px;
+}
