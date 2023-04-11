@@ -15,7 +15,21 @@
     <main>
         <div class="tela">
             <div class="card text-white bg-primary janela">
-                <div class="card-header titulo">Jo Ken Po</div>
+                <div class="card-header titulo">
+                    <div>Jo Ken Po</div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">Rodadas</div>
+                        </div>
+                        <select class="form-select form-control"  id="numPartidas">
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="5">5</option>
+                            <option value="7">7</option>
+                        </select>
+                      </div>
+                        
+                </div>
                 <div class="card-body jogo">
                     <div class="opcao" onclick="jogar(1)" onmouseover="opcao('Pedra')">
                         <img src="pedra.PNG" class="imagem">
@@ -28,7 +42,30 @@
                     </div>
                 </div>
                 <div class="resultado" id="opcao"></div>
-                <div class="resultado" id="resultado">
+                <div class="resultado" id="resultado"></div>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Jogador [1]
+                                </th>
+                                <th>
+                                    Jogador [2]
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td id="resultadoJ1">
+                                    0
+                                </td>
+                                <td id="resultadoJ2">
+                                    0
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
