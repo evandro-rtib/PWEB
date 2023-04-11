@@ -19,25 +19,23 @@
                     <div>Jo Ken Po</div>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                          <div class="input-group-text">Rodadas</div>
+                          <div class="input-group-text">Partidas</div>
                         </div>
-                        <select class="form-select form-control"  id="numPartidas">
+                        <select class="form-select form-control"  id="numPartidas" onclick="numPartidas()">
                             <option value="1">1</option>
                             <option value="3">3</option>
-                            <option value="5">5</option>
-                            <option value="7">7</option>
                         </select>
                       </div>
                         
                 </div>
                 <div class="card-body jogo">
-                    <div class="opcao" onclick="jogar(1)" onmouseover="opcao('Pedra')">
+                    <div class="opcao" onclick="jogar(1)">
                         <img src="pedra.PNG" class="imagem">
                     </div>
-                    <div class="opcao" onclick="jogar(2)" onmouseover="opcao('Papel')">
+                    <div class="opcao" onclick="jogar(2)">
                         <img src="papel.PNG" class="imagem">
                     </div>
-                    <div class="opcao" onclick="jogar(3)" onmouseover="opcao('Tesoura')">
+                    <div class="opcao" onclick="jogar(3)">
                         <img src="tesoura.PNG" class="imagem">
                     </div>
                 </div>
@@ -53,17 +51,12 @@
                                 <th>
                                     Jogador [2]
                                 </th>
+                                <th>
+                                    Vencedor
+                                </th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr> 
-                                <td id="resultadoJ1">
-                                    0
-                                </td>
-                                <td id="resultadoJ2">
-                                    0
-                                </td>
-                            </tr>
+                        <tbody id="resJogo">
                         </tbody>
                     </table>
                 </div>

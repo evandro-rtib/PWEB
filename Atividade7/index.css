@@ -6,9 +6,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 300px;
-    min-width: 300px;
-    height: 600px;
     width: auto;
 }
 
@@ -27,7 +24,7 @@ body {
 
 .resultado {
     text-align: center;
-    font-size: 300%;
+    font-size: 150%;
 }
 
 
