@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./icon.png"/>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Pesquisa</title>
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="card text-white bg-primary">
+                <div class="card-header bg-dark">Pesquisa do Filme</div>
+                <div class="card-body">
+                    <form class="form" id="formFilme">
+                        <div class="form-group row mt-2">
+                            <div class="col col-md-5">
+                                <div class="input-group mb-6">
+                                    <div class="input-group-prepend">
+                                    <div class="input-group-text">Nome</div>
+                                    </div>
+                                    <input type="text" class="form-control" id="nome" placeholder="Nome">
+                                </div>
+                            </div>
+                            <div class="col col-md-3">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                    <div class="input-group-text">Idade</div>
+                                    </div>
+                                    <input type="number" class="form-control" id="idade" placeholder="Idade">
+                                </div>
+                            </div>                            
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="sexoM" name="sexo" value="M" class="custom-control-input">
+                                <label class="custom-control-label" for="sexoM">Masculino</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="sexoF" name="sexo" value="F" class="custom-control-input">
+                                <label class="custom-control-label" for="sexoF">Feminino</label>
+                            </div>
+                        </div>
+                        <div class="form-group row mt-2">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <label class="input-group-text" for="opniao">Opnião</label>
+                                </div>
+                                <select class="custom-select" id="opniao">
+                                  <option selected>Selecione</option>
+                                  <option value="0">Péssimo</option>
+                                  <option value="1">Ruim</option>
+                                  <option value="2">Bom</option>
+                                  <option value="3">Ótimo</option>
+                                </select>
+                              </div>
+                        </div>
+                        <div class="form-group row mt-2"></div>
+                        <button type="submit" class="btn btn-success mb-2">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div class="container">
+            <div class="card text-white bg-primary">
+                <div class="card-header bg-dark">Resultados</div>
+                <div class="card-body">
+                    <div id="mediaIdade">
+                        <h2 >
+                            Média Idade: 0
+                        </h2>
+                    </div>
+                    <div id="menorIdade">
+                        <h2>
+                            Menor Idade: 0
+                        </h2>
+                    </div>
+                    <div  id="maiorIdade">
+                        <h2>
+                            Maior Idade: 0
+                        </h2>
+                    </div>
+                    <div id="qtdHomens">
+                        <h2 >
+                            Quantidade Homens: 0
+                        </h2>
+                    </div>
+                    <div id="qtdMulheres">
+                        <h2 >
+                            Quantidade Mulheres: 0
+                        </h2>
+                    </div>
+                    <div  id="pessimo">
+                        <h2>
+                            Péssimo: 0 %
+                        </h2>
+                    </div>
+                    <div id="ruim">
+                        <h2 >
+                            Ruim: 0 %
+                        </h2>
+                    </div>
+                    <div id="bom">
+                        <h2 >
+                            Bom: 0 %
+                        </h2>
+                    </div>
+                    <div id="otimo">
+                        <h2 >
+                            Péssimo: 0 %
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/index.js"></script>
+</body>
+</html>
