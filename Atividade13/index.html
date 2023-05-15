@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercicio 13</title>
+    </head>
+    <body>
+        <label for="txt"> Texto</label>
+        <input type="texto" value="Teste Inicial" name="txt" id="txt" size="20" maxlength="20"
+                    onfocus="txtOriginal(this.value)" onkeydown="txtEdicao(this.value)" />
+        <br/>
+        <label for="ckb1"> Maiúsculas</label>
+        <input type="radio" id="rbMa" value="maiusculo" name="rb" onclick="troca(this.value)" />
+        <br/>
+        <label for="ckb1"> Minúsculas</label>
+        <input type="radio" id="rbMi" value="minusculo" name="rb" onclick="troca(this.value)" />
+        <br/>
+        <label for="ckb1"> Original</label>
+        <input type="radio" id="rbOr" value="original" name="rb" onclick="troca(this.value)" />
+        <script>
+             valOriginal="Teste Inicial"
+            let txt = document.getElementById("txt");
+            function troca(opcao){
+                if (opcao === "maiusculo")
+                    txt.value = txt.value.toUpperCase();
+                else if (opcao === "minusculo")
+                    txt.value = txt.value.toLowerCase();
+                else 
+                    txt.value = valOriginal;
+            }
+            function txtOriginal(valor){
+                troca("original")
+                document.getElementById("rbOr").checked=true;
+            }
+            function txtEdicao(valor){
+                valOriginal=valor;
+            }
+        </script>
+    </body>
