@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <title>Atividade 12</title>
+
+    </head>
+    <body>
+        <div class="container bg-info">
+            <h1 class="text-white">Formulário Principal</h1>
+            <form onsubmit="return handleSubmit()">
+                <div class="form-group">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" aria-describedby="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu e-mail">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="areaMensagem">Mensagem</label>
+                    <input type="area" class="form-control" id="areaMensagem" placeholder="Digite sua mensagem">
+                </div>
+                <h4 class="text-white mt-4">Pesquisa</h4>
+                <h5 class="text-white mt-2">Primeira vez nessa página?</h5>
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="radio" name="radioPesquisa" id="radioSim" value="sim" onchange="selecaoPesquia(this.value)" required>
+                    <label class="form-check-label" for="radioSim">
+                        Sim
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioPesquisa" id="radioNao" value="nao" onchange="selecaoPesquia(this.value)" required>
+                    <label class="form-check-label" for="radioNao">
+                        Não
+                    </label>
+                </div>
+                <div>
+                    <h6 class="text-white" id="pesq">
+
+                    </h6>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2 mb-2">Enviar</button>
+                <button type="reset" class="btn btn-primary mt-2 mb-2">Limpar</button>
+
+            </form>
+        </div>
+        <script>
+            var nome = document.getElementById("inputName");
+            var email = document.getElementById("inputEmail");
+            var mensagem = document.getElementById("areaMensagem");
+            var pesq = document.getElementById("pesq");
+
+            function checarNome(){
+                if (nome.value.length < 10){
+                    console.log("O Valor mínio para o campo nome é de 10 caracteres");
+                    return false
+                }
+                return true
+            }
+            
+            function checarEmail(){
+                if (email.value.length < 5 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1){
+                    console.log("O Valor mínio para o campo email é de 10 caracteres, conter o @ e o .");
+                    return false
+                }
+                return true
+            }
+
+            function checarMensagem(){
+                if (mensagem.value.length < 20 ){
+                    console.log("O Valor mínio para o campo de mensagem é de 20 caracteres");
+                    return false
+                }
+                return true
+            }
+
+            function selecaoPesquia(op){
+                let pesquisa
+                if (op === "sim"){
+                    pesquisa="Volte sempre a essa página";
+                }
+                else {
+                    pesquisa="Quem bom ter você aqui!";
+                }
+                pesq.innerHTML = pesquisa;
+            }
+            function handleSubmit(){
+                if (! checarNome()){
+                    return false;
+                }
+                if (! checarEmail()){
+                    return false;
+                }
+                if (! checarMensagem())
+                {
+                    return false;
+                }
+                return true
+            }
+        </script>
+
+    </body>
